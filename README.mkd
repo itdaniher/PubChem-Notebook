@@ -1,0 +1,10 @@
+basic summaries from pubchem
+
+mirror ftp.ncbi.nlm.nih.gov/pubchem/Compound/CURRENT-Full/SDF to this directory
+
+run said script for each `.sdf.gz`
+
+ > for a in SDF/*sdf.gz; do python ./ChEBI_JSON_Builder.py $a; done
+ > zcat SDF/*json.gz | gzip - > SDF.json.gz
+
+you now have an 8-9GB text file with charge, mass, name, structure in InChI and SMILES, and CID, one compound per line. 
